@@ -1,0 +1,208 @@
+/* index */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fbeff5;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+}
+
+h2 {
+    color: #d63384;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #b02a6c;
+}
+
+/* login */ 
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #d63384;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b0256a;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/*terminos y condiciones*/
+
+.terms-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: #d63384;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+ul {
+    text-align: left;
+    list-style-type: none; 
+    padding: 0;
+}
+
+ul li {
+    font-size: 1em;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.4;
+}
+
+ul li::before {
+    content: "•"; 
+    position: absolute;
+    left: 0;
+    color: #d63384;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* cuenta regresiva*/
+
+/* Asegúrate de que la imagen de fondo cubra toda la pantalla */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Esto asegura que la imagen ocupe toda la pantalla */
+    background-image: url('../images/ELLA/amor.jpeg'); /* Cambia esto por la ruta correcta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Esto hará que la imagen se quede fija mientras haces scroll */
+    font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente si lo deseas */
+    color: white; /* Texto blanco para contraste */
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    align-items: center; /* Alineamos verticalmente */
+    justify-content: center; /* Alineamos horizontalmente */
+    text-align: center; /* Alineamos el texto */
+}
+
+h2 {
+    color: #d63384;
+}
+
+/* Estilo del contenedor de la cuenta regresiva */
+.countdown-container {
+    background-color: rgba(252, 250, 250, 0.144); /* Fondo oscuro semi-transparente para resaltar el texto */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    max-width: 600px; /* Controlamos el ancho del contenedor */
+    width: 100%; /* Esto asegura que el contenedor no se quede muy pequeño */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
+}
+
+/* Estilo del título */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de elegancia */
+}
+
+/* Estilo para el texto de la cuenta regresiva */
+#countdown {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgb(247, 241, 241); /* Sombra en el texto */
+}
+

@@ -1,0 +1,195 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../images/ELLA/amor1.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(248, 245, 245, 0.11);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.788);
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    /* Espaciado con margen superior e inferior */
+    margin-top: 20px;  /* Espacio en la parte superior */
+    margin-bottom: 20px; /* Espacio en la parte inferior */
+
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+/* Contenedor del poema */
+.poema-container {
+    background: rgba(8, 8, 8, 0.514);  /* Fondo claro para resaltar el poema */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;  /* Espacio arriba y abajo del contenedor */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    max-height: 350px;  /* Limitar altura para agregar scroll si es necesario */
+    overflow-y: auto;   /* Habilitar scroll solo si el contenido es muy largo */
+}
+
+/* Estilo del título */
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para la descripción */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Video */
+video {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Poema */
+.poema {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Separación entre párrafos */
+.poema p {
+    margin-bottom: 15px;
+}
+
+/* Botón */
+button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #e65c50;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 64, 129, 0.5);
+}
+
+/* Corazones flotantes */
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('../images/heart.png') no-repeat center center;
+    background-size: contain;
+    animation: float 6s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* Cuenta regresiva */
+#countdownContainer {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #4a4a4a;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Diseño responsivo */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+    .container {
+        padding: 15px;
+        max-height: 80vh;  /* Menor altura en móviles */
+        margin-top: 10px;  /* Menor espacio superior */
+        margin-bottom: 10px;  /* Menor espacio inferior */
+    }
+
+    video {
+        max-height: 200px; /* Ajustamos el video para pantallas pequeñas */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .poema {
+        font-size: 16px;
+    }
+}
+
+/* Scroll minimalista y semi-transparente */
+.container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3); /* Scroll blanco semitransparente */
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: rgba(233, 227, 227, 0.596); /* Un poco más visible al pasar el mouse */
+}
+
+/* Scroll del poema más elegante */
+.poema-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.poema-container::-webkit-scrollbar-thumb {
+    background-color: rgba(61, 58, 58, 0.363);
+    border-radius: 10px;
+}
+
+.poema-container::-webkit-scrollbar-track {
+    background: transparent;
+}

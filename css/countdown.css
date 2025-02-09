@@ -1,0 +1,68 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../images/ELLA/amor1.jpeg'); /* Cambia esto por la ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenedor de la cuenta regresiva */
+.countdown-container {
+    background: rgba(252, 252, 252, 0.144);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+    max-width: 900px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Título */
+p {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle un toque elegante */
+}
+
+/* Texto de la cuenta regresiva */
+#countdown {
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle un toque elegante */
+    margin-top: 15px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Diseño responsivo */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+    #countdown {
+        font-size: 18px;
+    }
+    .countdown-container {
+        padding: 15px;
+    }
+}

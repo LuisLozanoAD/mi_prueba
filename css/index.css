@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/ELLA/foto46.jpeg'); /* Cambia esto por la ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Contenedor */
+.container {
+    background: rgba(255, 255, 255, 0.253);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgb(240, 235, 235);
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo para la descripción */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* GIF */
+.gif {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botones */
+.btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn a:first-child { /* Botón "SI" */
+    background-color: #ff4081;
+}
+
+.btn a:first-child:hover {
+    background-color: #e91e63;
+}
+
+/* Botón "NO" que se mueve */
+#btn-random {
+    background-color: #444;
+}
+
+/* Diseño responsivo */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+    .btn a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
