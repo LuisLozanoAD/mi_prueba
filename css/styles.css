@@ -164,7 +164,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh; /* Esto asegura que la imagen ocupe toda la pantalla */
-    background-image: url('../images/ELLA/amor.jpeg'); /* Cambia esto por la ruta correcta de tu imagen */
+    background-image: url('../images/ELLA/amor1.jpeg'); /* Cambia esto por la ruta correcta de tu imagen */
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center center; /* Centra la imagen */
     background-attachment: fixed; /* Esto hará que la imagen se quede fija mientras haces scroll */
