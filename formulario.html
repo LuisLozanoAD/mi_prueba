@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario del Amor</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Certificado de Amor</h1>
+        <form id="loveForm">
+            <label for="nombrePareja">Nombre de la persona que recibe el certificado:</label>
+            <input type="text" id="nombrePareja" name="nombrePareja" required>
+
+            <label for="nombreOtorgante">Nombre de quien otorga el certificado:</label>
+            <input type="text" id="nombreOtorgante" name="nombreOtorgante" required>
+
+            <label for="fechaRelacion">Fecha en que comenzó la relación o aniversario:</label>
+            <input type="date" id="fechaRelacion" name="fechaRelacion" required>
+
+            <label for="ciudad">Ciudad o lugar especial:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+
+            <label for="razonAmor">¿Por qué esta persona es especial para ti?</label>
+            <textarea id="razonAmor" name="razonAmor" rows="3" required></textarea>
+
+            <label for="mejorRecuerdo">El mejor recuerdo juntos:</label>
+            <textarea id="mejorRecuerdo" name="mejorRecuerdo" rows="3" required></textarea>
+
+            <label for="compromiso">Promesa o mensaje especial:</label>
+            <textarea id="compromiso" name="compromiso" rows="3" required></textarea>
+
+            <button type="submit">Generar Certificado</button>
+        </form>
+    </div>
+    <script src="js/formulario.js"></script>
+</body>
+</html>
+

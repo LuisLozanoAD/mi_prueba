@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         alert("¡Contrato aceptado! Ahora puedes ver nuestra historia 💕");
-        window.location.href = "principal.html";
+        window.location.href = "formulario.html";
     });
 });

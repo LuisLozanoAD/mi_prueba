@@ -12,7 +12,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     const PASSWORD_CORRECTO = "090421";
 
     if (username === USERNAME_CORRECTO && password === PASSWORD_CORRECTO) {
-        window.location.href = "terms.html"; // Redirige a la página de términos y condiciones
+        window.location.href = "terms.html"; // Redirige a la página de formulario
     } else {
         errorMessage.textContent = "Usuario o contraseña incorrectos.";
     }

@@ -1,0 +1,117 @@
+body {
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    background-color: #eaeaea; /* Fondo gris claro */
+    margin: 0;
+    padding: 20px;
+}
+
+.certificado-container {
+
+    background: #fff;
+    padding: 40px;
+    border: 7px solid #2c3e50; /* Marco elegante azul oscuro */
+    border-radius: 0px;
+    max-width: 950px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    
+    }
+
+
+
+/* Línea decorativa superior e inferior */
+.certificado-container::before,
+.certificado-container::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #d4af37; /* Dorado elegante */
+    width: 80%;
+    margin: 10px auto;
+}
+
+h1 {
+    color: #2c3e50; /* Azul oscuro serio */
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+/* Espacio para el sello */
+.sello-container {
+    margin-top: 30px;
+}
+
+.sello-container img {
+    width: 150px; /* Tamaño del sello */
+    opacity: 0.7;
+}
+
+/* Botón de descarga */
+button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1a252f;
+    transform: scale(1.05);
+}
+
+.boton {
+    display: block; /* Hace que los botones ocupen toda la línea */
+    width: 200px; /* Ancho del botón */
+    padding: 10px 15px;
+    margin: 10px auto; /* Centrado automático */
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #021d3a; /* Color azul */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    text-align: center;
+}
+
+.boton:hover {
+    background-color: #1a3653; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Icono en el botón */
+button i {
+    margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) { /* Para pantallas pequeñas */
+    .certificado-container {
+      width: 95%;
+      height: auto;
+    }
+  }
+

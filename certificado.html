@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado de Amor</title>
+    <link rel="stylesheet" href="css/certificado.css">
+
+    <!-- Librerías necesarias para la generación del PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="certificado-container" id="certificado">
+        <h1>CERTIFICADO DE AMOR</h1>
+        <p>Otorgado a</p>
+        <h2 id="nombrePareja"></h2>
+
+        <p>Por haber demostrado, con dulzura y dedicación, un amor sincero e incondicional, convirtiéndose en un pilar fundamental de felicidad y compañía.</p>
+
+        <p>Este certificado acredita su compromiso, cariño y entrega desde el <strong id="fechaRelacion"></strong>, fortaleciendo día a día un vínculo único e irrompible.</p>
+
+        <p>En reconocimiento a su amor inquebrantable y su capacidad de hacer de cada momento algo especial, se otorga el presente certificado, avalado por el corazón de quien más le ama.</p>
+
+        <p><strong>Fecha de emisión:</strong> <span id="fechaEmision"></span></p>
+        <p><strong>Lugar:</strong> <span id="ciudad"></span></p>
+
+        <p><strong>Razón especial:</strong> <span id="razonAmor"></span></p>
+        <p><strong>Mejor recuerdo juntos:</strong> <span id="mejorRecuerdo"></span></p>
+        <p><strong>Mensaje especial:</strong> <span id="compromiso"></span></p>
+
+        <div class="firmas">
+            <p><strong>Otorga el certificado:</strong> <span id="nombreOtorgante"></span></p>
+        </div>
+    </div>
+
+    <!-- Botón de descarga -->
+    <button id="downloadBtn">📥 Descargar Certificado</button>
+    <button id="inicioBtn" class="boton">Iniciar</button>
+
+
+    <script src="js/certificado.js"></script>
+</body>
+</html>

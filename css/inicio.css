@@ -18,8 +18,8 @@ h1 {
 
 .chat-container {
     width: 100%;
-    max-width: 350px;
-    height: 600px;
+    max-width: 320px;
+    height: 540px;
     background-color: rgba(229, 221, 213, 0.9);
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -32,7 +32,7 @@ h1 {
 .poem-container {
     width: 100%;
     max-width: 500px;
-    height: 550px;
+    height: 500px;
     background-color: rgba(229, 221, 213, 0.623);
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -181,17 +181,17 @@ h1 {
 @media (max-width: 480px) {
     .chat-container {
         height: 500px;
-        max-width: 90%;
+        max-width: 65%;
     }
 
     .poem-container {
-        height: 50px;
-        max-width: 90%;
+        height: 450px;
+        max-width: 80%;
     }
 
     .nav-button {
         font-size: 24px;
-        padding: 8px;
+        padding: 15px;
     }
 
     .poem-content h1 {
