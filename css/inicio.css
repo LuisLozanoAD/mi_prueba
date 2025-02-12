@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/ELLA/amor1.jpeg'); /* Fondo estilo WhatsApp */
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 350px;
+    height: 600px;
+    background-color: rgba(229, 221, 213, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.poem-container {
+    width: 100%;
+    max-width: 500px;
+    height: 550px;
+    background-color: rgba(229, 221, 213, 0.623);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+    padding: 20px;
+    scroll-behavior: smooth; /* Añadido para un desplazamiento suave */
+}
+
+.header {
+    background-color: #075e54;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.sub-header {
+    font-size: 12px;
+    color: #d9d9d9;
+    align-self: flex-start;
+}
+
+.messages {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    background-image: url('../images/ELLA/perfil.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.message.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: white;
+    align-self: flex-start;
+}
+
+.message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.input-area {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.input-area input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #075e54;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.952);
+    background-color: rgba(255, 255, 255, 0.603);
+}
+
+.nav-button:hover {
+    opacity: 1;
+    background-color: rgba(7, 94, 84, 0.8);
+    color: #ffffff;
+}
+
+.next {
+    right: -40px;
+}
+
+.prev {
+    left: -40px;
+}
+
+.poem-content {
+    padding: 20px;
+    text-align: justify;
+}
+
+.poem-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #075e54;
+}
+
+.navigation-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #075e54;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navigation-buttons button:hover {
+    background-color: #128c7e;
+}
+
+
+@media (max-width: 480px) {
+    .chat-container {
+        height: 500px;
+        max-width: 90%;
+    }
+
+    .poem-container {
+        height: 50px;
+        max-width: 90%;
+    }
+
+    .nav-button {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .poem-content h1 {
+        font-size: 24px;
+    }
+
+    .sub-header {
+        font-size: 10px;
+        padding-left: 5px;
+    }
+} 
+
+
+.poem-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.poem-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.poem-container::-webkit-scrollbar-thumb {
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 10px;
+}
+
+.poem-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.8);
+}
+
+.poem-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}

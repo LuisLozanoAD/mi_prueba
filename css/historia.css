@@ -1,0 +1,308 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fef8f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.timeline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #ff9a9e #fef8f5;
+}
+
+.timeline::-webkit-scrollbar {
+    height: 8px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background: #ff9a9e;
+    border-radius: 10px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ff9a9e;
+    transform: translateY(-50%);
+}
+
+.moment {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.moment h2 {
+    color: #ff6f91;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.moment p {
+    font-size: 1rem;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.moment img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ff9a9e;
+    color: #fff;
+}
+
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff9a9e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .timeline {
+        flex-direction: row;  /* Asegura que la dirección sea horizontal */
+        overflow-x: auto;     /* Habilita el scroll horizontal */
+        overflow-y: hidden;   /* Desactiva el scroll vertical */
+        white-space: nowrap;  /* Evita que los elementos se envuelvan */
+        padding: 1rem 0;      /* Ajusta el padding para mejor visualización */
+    }
+
+    .moment {
+        min-width: 80%;       /* Asegura que cada 'momento' ocupe suficiente espacio en pantalla */
+        margin: 0 1rem;       /* Espacio entre cada elemento */
+        flex: 0 0 auto;       /* Evita que los elementos cambien de tamaño */
+    }
+
+    .moment img {
+        width: 65%;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+}
+
+/* Estilo para la sección del poema */
+.poem-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.poem-card {
+    background: #fff;
+    border: 2px solid #ff9a9e;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poem-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.poem-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    color: #ff6f91;
+    margin: 0;
+}
+
+.poem-content {
+    display: none;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+    line-height: 1.5;
+    max-height: 300px;  /* Altura máxima para el contenido */
+    overflow-y: auto;   /* Scroll propio */
+    padding-right: 10px; /* Espacio para la barra de scroll */
+}
+
+/* Estilo para mostrar el poema cuando se hace clic */
+.poem-card.open .poem-content {
+    display: block;
+}
+
+.poem-card.open .poem-title::after {
+    content: " \2191";
+    font-size: 1.2rem;
+    color: #ff6f91;
+}
+
+.poem-title::after {
+    content: " \2193";
+    font-size: 1.2rem;
+    color: #ff6f91;
+}
+
+/* Botón de inicio más elegante */
+.inicio-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(to right, #ff6f91, #ff9671);
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.inicio-btn:hover {
+    background: linear-gradient(to right, #ff9671, #ff6f91);
+    transform: translateY(-3px);
+}
+
+.inicio-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para el botón */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inicio-btn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación para los momentos de la línea de tiempo */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.moment {
+    animation: slideIn 0.8s ease-in-out;
+}
+
+/* Animación para el poema */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.poem-card {
+    animation: scaleUp 0.8s ease-in-out;
+}
+
