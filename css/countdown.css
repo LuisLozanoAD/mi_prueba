@@ -42,6 +42,31 @@ p {
     margin-top: 15px;
 }
 
+/* Estilos para el botón de cumpleaños */
+#birthday-button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#birthday-button:hover {
+    background-color: #e91e63;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+#birthday-button:active {
+    transform: scale(1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Animación de entrada */
 @keyframes fadeIn {
     from {
