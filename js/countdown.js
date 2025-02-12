@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const birthdayButton = document.getElementById("birthday-button");
 
     // Fecha objetivo (ejemplo: 14 de febrero)
-    const targetDate = new Date("2025-02-12T03:40:00").getTime();
+    const targetDate = new Date("2025-02-14T00:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
