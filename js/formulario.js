@@ -15,4 +15,3 @@ document.getElementById("loveForm").addEventListener("submit", function(event) {
     
     window.location.href = "certificado.html?" + urlParams.toString();
 });
-
